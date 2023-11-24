@@ -434,3 +434,47 @@ header{
     color: var(--main-color);
     text-align: center;
 }
+/* responsive */
+@media (max-width:1080px){
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .home-text h1{
+        font-size: 3rem;
+    }
+    .product-content{
+        grid-template-columns: repeat(3, 1fr);
+        padding: 40px;
+    }
+}
+@media(max-width: 875px){
+    section{
+        padding: 2rem 0;
+    }
+    .home-text h1{
+        font-size: 2.5rem;
+    }
+}
+@media(max-width: 770px){
+    section{
+        padding: 2rem 0;
+    }
+    .home-text h1{
+        font-size: 2.5rem;
+    }
+}
+@media(max-width: 770px){
+    .home{
+        min-height: 500px;
+        grid-template-columns: 1fr;
+        margin-top:4.5rem !important;
+    }
+    .home-text{
+         order:1;
+    }
+    .heading h2{
+        font-size: 1.6rem;
+        font-weight: 800;
+    }
+}
