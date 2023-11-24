@@ -28,6 +28,14 @@ body {
     color: var(--text-color);
     background: var(--bg-color);
 }
+/* custom scroll bar */
+html::-webkit-scrollbar{
+    width: 0.5rem;
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+}
 
 a {
     text-decoration: none;
@@ -183,6 +191,7 @@ header {
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
+    flex-direction: column;
 }
 
 .service {
@@ -643,5 +652,35 @@ header {
     .nav-link{
         display: block;
         margin: 1rem 0;
+    }
+}
+@media(max-width:500px){
+    .heading h2 br{
+        display: contents;
+    }
+    .service-content{
+        justify-content: center;
+    }
+    .product-content{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .footer{
+        grid-template-columns: 1fr;
+    }
+}
+@media(max-width:380px){
+    .service-content{
+        grid-template-columns: repeat(auto-fit, minmax(auto, 140px));
+    }
+    .ser-box img{
+        width: 80px;
+        height: 80px;
+    }
+    .home-text h1{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 0.9rem;
     }
 }
